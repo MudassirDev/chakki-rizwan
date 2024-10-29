@@ -5,8 +5,8 @@ firebase.onAuthStateChanged(firebase.auth, (user) => {
     } else {
         console.log("No user is signed in.");
         window.userLoggedIn = false;
-        if (window.location.pathname != "/" && window.location.pathname != "/pages/login.html") {
-            window.location.href = "/pages/login.html"
+        if (window.location.pathname != "/chakki-rizwan/" && window.location.pathname != "/chakki-rizwan/pages/login.html") {
+            window.location.href = "/chakki-rizwan/pages/login.html"
         }
     }
 });
