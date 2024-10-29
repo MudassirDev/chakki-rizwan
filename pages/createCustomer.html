@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    
+    <ul>
+        <li><a class="active" href="/chakki">Home</a></li>
+        <li><a class="active" href="/chakki/pages/createcustomer.html">Create Customer</a></li>
+        <li><a class="active" href="/chakki/pages/createorderforcustomer.html">Create Order (For Customer)</a></li>
+        <li><a class="active" href="/chakki/pages/createorder.html">Create Order</a></li>
+        <li><a id="logoutBtn" href="#">Logout</a></li>
+    </ul> 
+
+    
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyCAmDmDM_rYndxnkhIzHBrP6x0JPtDupzU",
+          authDomain: "chakki-1ad9d.firebaseapp.com",
+          projectId: "chakki-1ad9d",
+          storageBucket: "chakki-1ad9d.appspot.com",
+          messagingSenderId: "400902058518",
+          appId: "1:400902058518:web:ac8d50e36db35a3ed63b37",
+          measurementId: "G-D9548MQV0C"
+        };
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+      </script>
+</body>
+</html>

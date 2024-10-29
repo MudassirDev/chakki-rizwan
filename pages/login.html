@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    
+    <form id="login-form">
+        <input type="text" name="email" required>
+        <input type="text" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import {  getAuth, signInWithEmailAndPassword, setPersistence, browserSessionPersistence, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyCAmDmDM_rYndxnkhIzHBrP6x0JPtDupzU",
+          authDomain: "chakki-1ad9d.firebaseapp.com",
+          projectId: "chakki-1ad9d",
+          storageBucket: "chakki-1ad9d.appspot.com",
+          messagingSenderId: "400902058518",
+          appId: "1:400902058518:web:ac8d50e36db35a3ed63b37",
+          measurementId: "G-D9548MQV0C"
+        };
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        window.firebase = {
+            auth: auth,
+            signInFn: signInWithEmailAndPassword,
+            setPersistence: setPersistence,
+            browserSessionPersistence: browserSessionPersistence,
+            onAuthStateChanged: onAuthStateChanged
+        }
+      </script>
+      <script src="/assets/js/global.js" defer></script>
+      <script src="/assets/js/login.js" defer></script>
+</body>
+</html>
